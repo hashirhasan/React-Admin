@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import Viewusers from './Viewusers';
 import Adduser from './Adduser';
+import swal from 'sweetalert';
 class Admin extends React.Component{
   state={
     users:[
@@ -50,7 +51,22 @@ class Admin extends React.Component{
 
   //delete user
  delUser=(id)=>{
-  this.setState({users:[...this.state.users.filter(user=>user.id!==id)]})
+    swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover !",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("User deleted!", {
+            icon: "success",
+          });
+          this.setState({users:[...this.state.users.filter(user=>user.id!==id)]})
+        }
+      });
+
  }
 
  //show form
@@ -62,10 +78,12 @@ class Admin extends React.Component{
  }
 
  addUser=(newuser)=>{
+    swal("Created!", "User Created!", "success");
     this.setState({users:[...this.state.users,newuser]})
  }
 
  editUser=(edituser)=>{
+    swal("Updated!", "User details Updated!", "success");
      console.log(edituser)
      this.setState({users:[...this.state.users.filter(user=>user.id!==edituser.id),edituser]})
    

@@ -83,7 +83,7 @@ export class Singleviewuser extends Component {
               <input type="text" name="address" placeholder="address" defaultValue={this.props.user.address.city} onChange={this.onchangeeditaddress}/><br />
               <input type="text" name="phone" placeholder="phone_no" defaultValue={this.props.user.phone_no} onChange={this.onchangeeditphone_no}/><br />
               <input type="text"  name="website" placeholder="website" defaultValue={this.props.user.website} onChange={this.onchangeeditwebsite}/><br />
-               <input  type='submit' className="btn btn-success" value='Update'/>
+               <button  type='submit' className="btn btn-success">Update</button>
               </form>
               </div> 
           )

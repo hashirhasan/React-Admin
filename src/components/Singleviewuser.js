@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 export class Singleviewuser extends Component {
     
     state={
-        name:'',
-        username:'',
-        address:'',
-        phone_no:'',
-        email:'',
-        website:'',
+        name:this.props.user.name,
+        username:this.props.user.userame,
+        address:this.props.user.address.city,
+        phone_no:this.props.user.phone_no,
+        email:this.props.user.email,
+        website:this.props.user.website,
         isedit:false
     }
 
@@ -41,8 +41,8 @@ export class Singleviewuser extends Component {
 
 
 
-   handlesubmit(e){
-    e.preventDefault();
+   handlesubmit=(e)=>{
+     e.preventDefault();
       const editUser={ 
         id:this.props.user.id,
         name:this.state.name,
@@ -74,7 +74,7 @@ export class Singleviewuser extends Component {
           </div>):
           (
               <div style={styleform}>
-            <form onSubmit={this.handleSubmit}>
+            <form  onSubmit={this.handlesubmit}>
             <h1 className="text-center">Edit User</h1>
              <span className='left' onClick={this.hideeditform}>X</span> 
               <input type="text" name="name" placeholder="name" defaultValue={this.props.user.name} onChange={this.onchangeeditname}/><br />
@@ -83,7 +83,7 @@ export class Singleviewuser extends Component {
               <input type="text" name="address" placeholder="address" defaultValue={this.props.user.address.city} onChange={this.onchangeeditaddress}/><br />
               <input type="text" name="phone" placeholder="phone_no" defaultValue={this.props.user.phone_no} onChange={this.onchangeeditphone_no}/><br />
               <input type="text"  name="website" placeholder="website" defaultValue={this.props.user.website} onChange={this.onchangeeditwebsite}/><br />
-               <button  type='submit' className="btn btn-success"  name="submit">Update</button>
+               <input  type='submit' className="btn btn-success" value='Update'/>
               </form>
               </div> 
           )

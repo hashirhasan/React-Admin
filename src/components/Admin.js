@@ -16,30 +16,30 @@ class Admin extends React.Component{
       },
       {
         id:2,
-        name:'Harry',
-        username:'harsh',
-        email:'hasan@gmail.com',
-        address:{city:'gkp'},
-        phone_no:'34567',
-        website:'jhgfdsa.qwe'
+        name:'shreya',
+        username:'shru',
+        email:'shreya@gmail.com',
+        address:{city:'ert'},
+        phone_no:'34dfk567',
+        website:'asdfg.qwe'
       },
       {
         id:3,
-        name:'Harry',
-        username:'harsh',
-        email:'hasan@gmail.com',
-        address:{city:'gkp'},
-        phone_no:'34567',
-        website:'jhgfdsa.qwe'
+        name:'shivam',
+        username:'shivi',
+        email:'hsthhn@gmail.com',
+        address:{city:'lko'},
+        phone_no:'345dffg67',
+        website:'jhgffvfdsa.qwe'
       },
       {
         id:4,
-        name:'Harry',
-        username:'harsh',
-        email:'hasan@gmail.com',
+        name:'fahad',
+        username:'fraudh',
+        email:'hdfdvn@gmail.com',
         address:{city:'gkp'},
-        phone_no:'34567',
-        website:'jhgfdsa.qwe'
+        phone_no:'3433447',
+        website:'daswer.qwe'
       }
     ],
     isseen:true
@@ -67,8 +67,9 @@ class Admin extends React.Component{
 
  editUser=(edituser)=>{
      console.log(edituser)
-     this.setState({users:[...this.state.users.filter(user=>user.id!==edituser.id)]})
-     this.setState({users:[...this.state.users,edituser]})
+     this.setState({users:[...this.state.users.filter(user=>user.id!==edituser.id),edituser]})
+   
+    
  }
 
   render(){

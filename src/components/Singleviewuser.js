@@ -77,12 +77,12 @@ export class Singleviewuser extends Component {
             <form  onSubmit={this.handlesubmit}>
             <h1 className="text-center">Edit User</h1>
              <span className='left' onClick={this.hideeditform}>X</span> 
-              <input type="text" name="name" placeholder="name" defaultValue={this.props.user.name} onChange={this.onchangeeditname}/><br />
-              <input type="text"  name="username" placeholder="username" defaultValue={this.props.user.username} onChange={this.onchangeeditusername}/><br />
-               <input type="text" name="email" placeholder="email" defaultValue={this.props.user.email} onChange={this.onchangeeditemail}/><br/>
-              <input type="text" name="address" placeholder="address" defaultValue={this.props.user.address.city} onChange={this.onchangeeditaddress}/><br />
-              <input type="text" name="phone" placeholder="phone_no" defaultValue={this.props.user.phone_no} onChange={this.onchangeeditphone_no}/><br />
-              <input type="text"  name="website" placeholder="website" defaultValue={this.props.user.website} onChange={this.onchangeeditwebsite}/><br />
+              <input type="text" name="name" placeholder="name" defaultValue={this.props.user.name} onChange={this.onchangeeditname} required/><br />
+              <input type="text"  name="username" placeholder="username" defaultValue={this.props.user.username} onChange={this.onchangeeditusername} required/><br />
+               <input type="text" name="email" placeholder="email" defaultValue={this.props.user.email} onChange={this.onchangeeditemail} required/><br/>
+              <input type="text" name="address" placeholder="address" defaultValue={this.props.user.address.city} onChange={this.onchangeeditaddress} required/><br />
+              <input type="text" name="phone" placeholder="phone_no" defaultValue={this.props.user.phone_no} onChange={this.onchangeeditphone_no} required/><br />
+              <input type="text"  name="website" placeholder="website" defaultValue={this.props.user.website} onChange={this.onchangeeditwebsite} required/><br />
                <button  type='submit' className="btn btn-success">Update</button>
               </form>
               </div> 

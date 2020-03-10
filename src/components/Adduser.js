@@ -61,12 +61,12 @@ onSubmit=(e)=>{
          <form onSubmit={this.onSubmit}>
       <h1 className="text-center">Create User</h1>
        <span className='left' onClick={this.props.hideform}>X</span> 
-        <input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.onchangename}/><br />
-        <input type="text"  name="username" placeholder="username" value={this.state.username} onChange={this.onchangeusername}/><br />
-         <input type="text" name="email" placeholder="email" value={this.state.email} onChange={this.onchangeemail}/><br/>
-        <input type="text" name="address" placeholder="address" value={this.state.address} onChange={this.onchangeaddress}/><br />
-        <input type="text" name="phone" placeholder="phone_no" value={this.state.phone_no} onChange={this.onchangephone_no}/><br />
-        <input type="text"  name="website" placeholder="website" value={this.state.website} onChange={this.onchangewebsite}/><br />
+        <input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.onchangename} required/><br />
+        <input type="text"  name="username" placeholder="username" value={this.state.username} onChange={this.onchangeusername}  required/><br />
+         <input type="text" name="email" placeholder="email" value={this.state.email} onChange={this.onchangeemail} required/><br/>
+        <input type="text" name="address" placeholder="address" value={this.state.address} onChange={this.onchangeaddress} required/><br />
+        <input type="text" name="phone" placeholder="phone_no" value={this.state.phone_no} onChange={this.onchangephone_no} required/><br />
+        <input type="text"  name="website" placeholder="website" value={this.state.website} onChange={this.onchangewebsite} required/><br />
          <button  type="submit" className="btn btn-success"  name="submit">Submit</button>
         </form>   
             </div>):(

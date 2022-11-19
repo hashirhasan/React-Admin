@@ -9,7 +9,7 @@
     "react": "^16.13.0",
     "react-bootstrap-sweetalert": "^5.1.9",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "react-uuid": "^1.0.2",
     "sweetalert": "^2.1.2",
     "uuid": "^7.0.2"
